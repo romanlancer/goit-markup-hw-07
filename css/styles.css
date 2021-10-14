@@ -67,19 +67,17 @@ a {
   font-size: 26px;
   line-height: 1.19;
 }
-.logo.link.main {
+.logo {
   margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
 }
 .main-nav {
   display: flex;
   align-items: center;
 }
-.main-nav .item:not(:last-child) {
+.navigation-list .navigation-list__item:not(:last-child) {
   margin-right: 50px;
 }
-.contacts-header .item:not(:last-child) {
+.contacts-header .contacts-header__contacts-item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -105,28 +103,28 @@ a {
 header {
   background-color: var(--background-color);
 }
-.logo-accent {
+.logo__accent {
   color: var(--accent-color);
 }
-.logo-header {
+.logo__header {
   color: #000000;
 }
-.logo-footer {
+.logo__footer {
   color: var(--background-color);
 }
-.navigation-link {
+.navigation-list__navigation-link {
   color: var(--secondary-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.navigation-link:hover,
-.navigation-link:focus {
+.navigation-list__navigation-link:hover,
+.navigation-list__navigation-link:focus {
   color: var(--accent-color);
 }
-.navigation-link-current {
+.navigation-list__navigation-link--current {
   color: var(--accent-color);
   position: relative;
 }
-.navigation-link-current::after {
+.navigation-list__navigation-link--current::after {
   content: ' ';
   position: absolute;
   width: 48px;
@@ -136,7 +134,11 @@ header {
   right: 0;
   border-radius: 2px;
 }
-.navigation-link-current.portfolio.link::after {
+.navigation-list__navigation-link--current-portfolio {
+  color: var(--accent-color);
+  position: relative;
+}
+.navigation-list__navigation-link--current-portfolio::after {
   content: ' ';
   position: absolute;
   width: 78px;
@@ -146,7 +148,7 @@ header {
   right: 0;
   border-radius: 2px;
 }
-.contacts-link.link {
+.contacts-header__contacts-link {
   display: flex;
   align-items: center;
   font-weight: 500;
@@ -161,13 +163,8 @@ header {
   margin-right: 10px;
   fill: currentColor;
 }
-.contacts-link {
-  display: flex;
-  align-items: center;
-}
-
-.contacts-link:hover,
-.contacts-link:focus,
+.contacts-header__contacts-link:hover,
+.contacts-header__contacts-link:focus,
 .mail-icon:hover,
 .mail-icon:focus,
 .tel-icon:hover,
