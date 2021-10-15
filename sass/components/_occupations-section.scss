@@ -1,15 +1,10 @@
-.occupations__title,
-.team__title {
-	margin-bottom: 50px;
-	font-weight: 700;
-	font-size: 36px;
-	line-height: 1.17;
-	text-align: center;
-	color: var(--secondary-text-color);
-}
-
 .occupations {
 	padding-top: 0;
+
+	&__title {
+		@extend %title-section;
+	}
+
 	&__list {
 		display: flex;
 		margin-right: calc(-1 * #{$card-set-gap});

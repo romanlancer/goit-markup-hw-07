@@ -1,6 +1,10 @@
 .team {
 	background-color: $team-background-color;
 
+	&__title {
+		@extend %title-section;
+	}
+
 	&__list {
 		display: flex;
 		margin-right: calc(-1 * #{$card-set-gap});
@@ -43,9 +47,7 @@
 	&__icon-ref {
 		width: 44px;
 		height: 44px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@include centralFlex();
 		border-radius: 50%;
 		color: #afb1b8;
 		cursor: pointer;

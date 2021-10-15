@@ -1,11 +1,6 @@
 .clients {
 	&__title {
-		font-weight: 700;
-		font-size: 36px;
-		line-height: 1.17;
-		text-align: center;
-		color: $secondary-text-color;
-		margin-bottom: 50px;
+		@extend %title-section;
 	}
 
 	&__list {
@@ -23,9 +18,7 @@
 		height: 92px;
 		border: 1px solid #afb1b8;
 		border-radius: 4px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@include centralFlex();
 		fill: #afb1b8;
 		transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	}
