@@ -87,6 +87,21 @@ a {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
+.contacts-header__contacts-link:hover, .contacts-header__contacts-link:focus, .contacts-header__mail-icon:hover, .contacts-header__mail-icon:focus, .contacts-header__tel-icon:hover, .contacts-header__tel-icon:focus {
+  color: #2196f3;
+  fill: #2196f3;
+}
+
+.contacts-header__mail-icon, .contacts-header__tel-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.subscribe-block:hover, .subscribe-block:focus, .subscribe-block__input:hover, .subscribe-block__input:focus {
+  border-color: #2196f3;
+  fill: #2196f3;
+}
+
 .logo {
   font-family: Raleway;
   font-weight: 700;
@@ -190,10 +205,6 @@ a {
   margin-left: auto;
 }
 
-.contacts-header__contacts-item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .contacts-header__contacts-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -209,14 +220,8 @@ a {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts-header__mail-icon, .contacts-header__tel-icon {
-  margin-right: 10px;
-  fill: currentColor;
-}
-
-.contacts-header__contacts-link:hover, .contacts-header__contacts-link:focus, .contacts-header__mail-icon:hover, .contacts-header__mail-icon:focus, .contacts-header__tel-icon:hover, .contacts-header__tel-icon:focus {
-  color: #2196f3;
-  fill: #2196f3;
+.contacts-header__contacts-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .hero {
@@ -368,11 +373,6 @@ a {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.subscribe-block:hover, .subscribe-block:focus, .subscribe-block__input:hover, .subscribe-block__input:focus {
-  border-color: #2196f3;
-  fill: #2196f3;
-}
-
 .subscribe__textarea-input {
   display: block;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -433,13 +433,6 @@ a {
   border-radius: 2px;
 }
 
-.subscribe-checkbox__input:checked + .subscribe-checkbox__icon {
-  border-color: transparent;
-  background-image: url(../images/icon-check.svg);
-  background-size: content;
-  background-origin: border-box;
-}
-
 .subscribe-checkbox__license {
   display: block;
   line-height: 1.71;
@@ -447,6 +440,13 @@ a {
           text-decoration-line: underline;
   color: #2196f3;
   margin-left: 4px;
+}
+
+.subscribe-checkbox__input:checked + .subscribe-checkbox__icon {
+  border-color: transparent;
+  background-image: url(../images/icon-check.svg);
+  background-size: content;
+  background-origin: border-box;
 }
 
 .subscribe__button {
@@ -590,8 +590,8 @@ a {
   display: flex;
 }
 
-.team__socials__icon-list:not(:last-child) {
-  margin-right: 10px;
+.team__socials__icon {
+  fill: currentColor;
 }
 
 .team__socials__icon-ref {
@@ -618,8 +618,8 @@ a {
   color: #ffffff;
 }
 
-.team__socials__icon {
-  fill: currentColor;
+.team__socials__icon-list:not(:last-child) {
+  margin-right: 10px;
 }
 
 .clients__list {
@@ -733,6 +733,32 @@ a {
   margin-bottom: calc(-1 * 30px);
 }
 
+.jobs__image {
+  position: relative;
+  overflow: hidden;
+}
+
+.jobs__overlay-text {
+  font-size: 18px;
+  line-height: 1.56;
+  color: #ffffff;
+  padding: 63px 24px;
+}
+
+.jobs__overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .jobs__card {
   -ms-flex-preferred-size: calc(100% / 3 - 30px);
       flex-basis: calc(100% / 3 - 30px);
@@ -750,35 +776,9 @@ a {
   cursor: pointer;
 }
 
-.jobs__image {
-  position: relative;
-  overflow: hidden;
-}
-
-.jobs__overlay {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .jobs__card:hover .jobs__overlay {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
-}
-
-.jobs__overlay-text {
-  font-size: 18px;
-  line-height: 1.56;
-  color: #ffffff;
-  padding: 63px 24px;
 }
 
 .page-footer {
@@ -847,6 +847,19 @@ a {
   color: #ffffff;
 }
 
+.footer-socials__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.footer-socials__icon {
+  fill: currentColor;
+}
+
 .footer-socials__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -855,15 +868,6 @@ a {
 
 .footer-socials__list:not(:last-child) {
   margin-right: 10px;
-}
-
-.footer-socials__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
 }
 
 .footer-socials__icon-ref {
@@ -890,10 +894,6 @@ a {
   background-color: #2196f3;
 }
 
-.footer-socials__icon {
-  fill: currentColor;
-}
-
 .signup-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -909,6 +909,13 @@ a {
   line-height: 1.14;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+.signup-form__icon {
+  margin-left: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .signup-form__input {
@@ -949,13 +956,6 @@ a {
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
-}
-
-.signup-form__icon {
-  margin-left: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .signup-form__button {

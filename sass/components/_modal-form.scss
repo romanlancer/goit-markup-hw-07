@@ -43,13 +43,18 @@
 	}
 
 	&:hover,
-	&:focus,
-	&__input:hover,
-	&__input:focus {
-		border-color: $accent-color;
-		fill: $accent-color;
+	&:focus {
+		@extend %subscribe-form_hover-focus;
 	}
 }
+
+.subscribe-block__input {
+	&:hover,
+	&:focus {
+		@extend %subscribe-form_hover-focus;
+	}
+}
+
 .subscribe__textarea-input {
 	display: block;
 	border: 1px solid rgba(33, 33, 33, 0.2);
@@ -83,19 +88,21 @@
 		border-radius: 2px;
 	}
 
-	&__input:checked + &__icon {
-		border-color: transparent;
-		background-image: url(../images/icon-check.svg);
-		background-size: content;
-		background-origin: border-box;
-	}
-
 	&__license {
 		display: block;
 		line-height: 1.71;
 		text-decoration-line: underline;
 		color: $accent-color;
 		margin-left: 4px;
+	}
+}
+
+.subscribe-checkbox__input {
+	&:checked + .subscribe-checkbox__icon {
+		border-color: transparent;
+		background-image: url(../images/icon-check.svg);
+		background-size: content;
+		background-origin: border-box;
 	}
 }
 

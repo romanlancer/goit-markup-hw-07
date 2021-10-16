@@ -28,3 +28,18 @@
 	background-color: #188ce8;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
+
+%header-icons-links_hover-focus {
+	color: $accent-color;
+	fill: $accent-color;
+}
+
+%header-mail-tel_icons-current {
+	margin-right: 10px;
+	fill: currentColor;
+}
+
+%subscribe-form_hover-focus {
+	border-color: $accent-color;
+	fill: $accent-color;
+}
